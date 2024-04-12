@@ -1,0 +1,22 @@
+.img-box{
+    margin: auto;
+    text-align: center;
+}
+.img-box img{
+    margin: auto;
+    text-align: center;
+}
+.img-box h6{
+    padding: 0px;
+    margin: 0px;
+    font-weight: 600;
+    color: rgb(106, 106, 106);
+}
+.loading{
+    text-align: center;
+    color: blue;
+    padding-left: auto;
+    padding-right: auto;
+    width: fit-content;
+    margin: auto;
+}

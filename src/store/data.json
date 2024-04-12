@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Amazon Assets",
+        "value1": 12,
+        "value2": 21
+    },
+    {
+        "name": "Google Holdings",
+        "value1": 14,
+        "value2": 24
+    },
+    {
+        "name": "Apple Investments",
+        "value1": 11,
+        "value2": 22
+    },
+    {
+        "name": "Microsoft Ventures",
+        "value1": 13,
+        "value2": 21
+    },
+    {
+        "name": "Facebook Capital",
+        "value1": 15,
+        "value2": 29
+    },
+    {
+        "name": "Tesla Capital",
+        "value1": 16,
+        "value2": 25
+    },
+    {
+        "name": "Alphabet Holdings",
+        "value1": 18,
+        "value2": 20
+    },
+    {
+        "name": "Samsung Investments",
+        "value1": 17,
+        "value2": 23
+    },
+    {
+        "name": "IBM Ventures",
+        "value1": 19,
+        "value2": 26
+    },
+    {
+        "name": "Sony Capital",
+        "value1": 20,
+        "value2": 27
+    },
+    {
+        "name": "Netflix Holdings",
+        "value1": 21,
+        "value2": 28
+    },
+    {
+        "name": "Intel Investments",
+        "value1": 22,
+        "value2": 30
+    },
+    {
+        "name": "Uber Capital",
+        "value1": 23,
+        "value2": 31
+    },
+    {
+        "name": "SpaceX Holdings",
+        "value1": 24,
+        "value2": 32
+    },
+    {
+        "name": "PayPal Investments",
+        "value1": 25,
+        "value2": 33
+    },
+    {
+        "name": "Cisco Capital",
+        "value1": 26,
+        "value2": 34
+    },
+    {
+        "name": "Adobe Ventures",
+        "value1": 27,
+        "value2": 35
+    },
+    {
+        "name": "Oracle Holdings",
+        "value1": 28,
+        "value2": 36
+    },
+    {
+        "name": "Twitter Capital",
+        "value1": 29,
+        "value2": 37
+    },
+    {
+        "name": "Snap Inc. Investments",
+        "value1": 40,
+        "value2": 38
+    },
+    {
+        "name": "Reddit Holdings",
+        "value1": 31,
+        "value2": 39
+    }
+]

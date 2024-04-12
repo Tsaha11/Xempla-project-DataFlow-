@@ -1,0 +1,94 @@
+@import './../../mixins.scss';
+
+.page-wrapper {
+    @include page;
+    @include page-title-section;
+}
+
+.report-page-wrapper {
+    .no-data {
+        display: none !important;
+
+        img {
+            height: 100px;
+        }
+    }
+
+    .container-opts {
+        .wrapper-in-con-opts {
+            @include white-bg-block;
+
+            .input-search-wrapper {
+                .input-seach {
+                    @include xem-input-text;
+                    padding-left: 27px;
+                }
+
+                .search-icon {
+                    height: 13px;
+                    left: 10px;
+                    top: 12px;
+                }
+            }
+        }
+
+        .asset-report-list {
+            height: calc(100vh - 270px);
+            min-height: 463px;
+            overflow: auto;
+            padding-right: 3px;
+
+            .indi-report-name {
+                span {
+                    padding: 14px;
+                    font-size: 13px;
+                    color: var(--color-black);
+                    background: var(--color-07);
+                    border-radius: 8px;
+                    @include com-transition;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: var(--color-09);
+                    }
+                }
+            }
+        }
+    }
+
+    .container-graph {
+        padding-left: 30px;
+
+        .wrapper-graph-report {
+            @include white-bg-block;
+
+            .text-insights-wrapper {
+                max-height: 200px;
+                overflow: auto;
+
+                .in-insi-wrapper {
+                    background: var(--color-07);
+                    border: 1px solid var(--color-09);
+                    padding: 15px;
+                    border-radius: 10px;
+
+                    p {
+                        font-size: 13px;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .wrapper-graph-section {
+                p {
+                    font-weight: 600;
+                }
+
+                .graph-wrapper {
+                    height: calc(100vh - 385px);
+                    min-height: 350px;
+                }
+            }
+        }
+    }
+}
