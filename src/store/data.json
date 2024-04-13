@@ -1,105 +1,126 @@
 [
     {
+        "index": 0,
         "name": "Amazon Assets",
         "value1": 12,
         "value2": 21
     },
     {
+        "index": 1,
         "name": "Google Holdings",
         "value1": 14,
         "value2": 24
     },
     {
+        "index": 2,
         "name": "Apple Investments",
         "value1": 11,
         "value2": 22
     },
     {
+        "index": 3,
         "name": "Microsoft Ventures",
         "value1": 13,
         "value2": 21
     },
     {
+        "index": 4,
         "name": "Facebook Capital",
         "value1": 15,
         "value2": 29
     },
     {
+        "index": 5,
         "name": "Tesla Capital",
         "value1": 16,
         "value2": 25
     },
     {
+        "index": 6,
         "name": "Alphabet Holdings",
         "value1": 18,
         "value2": 20
     },
     {
+        "index": 7,
         "name": "Samsung Investments",
         "value1": 17,
         "value2": 23
     },
     {
+        "index": 8,
         "name": "IBM Ventures",
         "value1": 19,
         "value2": 26
     },
     {
+        "index": 9,
         "name": "Sony Capital",
         "value1": 20,
         "value2": 27
     },
     {
+        "index": 10,
         "name": "Netflix Holdings",
         "value1": 21,
         "value2": 28
     },
     {
+        "index": 11,
         "name": "Intel Investments",
         "value1": 22,
         "value2": 30
     },
     {
+        "index": 12,
         "name": "Uber Capital",
         "value1": 23,
         "value2": 31
     },
     {
+        "index": 13,
         "name": "SpaceX Holdings",
         "value1": 24,
         "value2": 32
     },
     {
+        "index": 14,
         "name": "PayPal Investments",
         "value1": 25,
         "value2": 33
     },
     {
+        "index": 15,
         "name": "Cisco Capital",
         "value1": 26,
         "value2": 34
     },
     {
+        "index": 16,
         "name": "Adobe Ventures",
         "value1": 27,
         "value2": 35
     },
     {
+        "index": 17,
         "name": "Oracle Holdings",
         "value1": 28,
         "value2": 36
     },
     {
+        "index": 18,
         "name": "Twitter Capital",
         "value1": 29,
         "value2": 37
     },
     {
+        "index": 19,
         "name": "Snap Inc. Investments",
         "value1": 40,
         "value2": 38
     },
     {
+        "index": 20,
         "name": "Reddit Holdings",
         "value1": 31,
         "value2": 39
