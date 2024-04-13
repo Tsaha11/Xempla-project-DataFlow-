@@ -29,12 +29,17 @@
     border: 1px solid blue;
     border-radius: 10px;
     background:rgb(236, 236, 255);
+    color: black;
 }
 .header-dark{
     background-color: black;
 }
-
-
+.selected-option{
+    color: black;
+}
+.selected-dark{
+    color: black;
+}
 @media  screen and (max-width: 1000px) {
     .report-page-wrapper{
         display: flex;
@@ -43,4 +48,5 @@
 }
 .container-opts{
     margin-bottom: 2em;
+    text-align: center;
 }

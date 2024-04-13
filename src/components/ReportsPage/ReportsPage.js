@@ -49,55 +49,71 @@ const ReportsPage = () => {
         const abbreviation = words.map(word => word.charAt(0)).join(""); 
         return abbreviation.toUpperCase();
     }
-    const fetchHanlder=async(cnt)=>{
+    const fetchHandler = async (cnt) => {
         try {
-            const data=graphPoints
-            const size=10;
-            let mn=Math.min(size*cnt,data.length)
-            const tempData=[]
-            let mx=Math.max(0,size*(cnt-1))
-            for(let i=mx;i<mn;i++){
-                if(idx.includes(data[i].index)){
+            const data = graphPoints;
+            const size = 10;
+            let mn = Math.min(size * cnt, data.length);
+            const tempData = [];
+            let mx = Math.max(0, size * (cnt - 1));
+            for (let i = mx; i < mn; i++) {
+                if (idx.includes(data[i].index)) {
                     tempData.push({
-                        index:data[i].index,
-                        name:data[i].name,
-                        val1:data[i].value1,
-                        val2:data[i].value2,
-                        select:true
-                    })
-                }
-                else{
+                        index: data[i].index,
+                        name: data[i].name,
+                        val1: data[i].value1,
+                        val2: data[i].value2,
+                        select: true
+                    });
+                } else {
                     tempData.push({
-                        index:data[i].index,
-                        name:data[i].name,
-                        val1:data[i].value1,
-                        val2:data[i].value2,
-                        select:false
-                    })
+                        index: data[i].index,
+                        name: data[i].name,
+                        val1: data[i].value1,
+                        val2: data[i].value2,
+                        select: false
+                    });
                 }
             }
-            setgraphData(tempData)
+            setgraphData(tempData);
         } catch (error) {
             console.error("Error fetching data:", error);
         }
-    }
-    const addData = (data, ind) => {
-        if (!idx.includes(ind)) {
-            const updatedXaxis = [...xaxis, data.val1];
-            const updatedYaxis = [...yaxis, data.val2];
-            const updatedIdx = [...idx, ind];
-            const updateNames=[...namesAbbr,findAbbr(data.name)]
-            const updatedAvg=[...avg,(data.val1+data.val2)/2]
-            setXaxis(updatedXaxis);
-            setYaxis(updatedYaxis);
-            setAvg(updatedAvg)
-            setNamesAbbr(updateNames)
-            setIdx(updatedIdx);
-            fetchHanlder(p);
+    };
+    
+    const addData = async (data, ind) => {
+        try {
+            if (!idx.includes(ind)) {
+                const updatedXaxis = [...xaxis, data.val1];
+                const updatedYaxis = [...yaxis, data.val2];
+                const updatedIdx = [...idx, ind];
+                const updatedNamesAbbr = [...namesAbbr, findAbbr(data.name)];
+                const updatedAvg = [...avg, (data.val1 + data.val2) / 2];
+                setXaxis(updatedXaxis);
+                setYaxis(updatedYaxis);
+                setAvg(updatedAvg);
+                setNamesAbbr(updatedNamesAbbr);
+                setIdx(updatedIdx);
+            }
+        } catch (error) {
+            console.error("Error adding data:", error);
         }
     };
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            await fetchHandler(p);
+        };
+    
+        // Check if xaxis and yaxis have been updated before fetching data
+        if (xaxis.length > 0 && yaxis.length > 0) {
+            fetchData();
+        }
+    }, [xaxis, yaxis, p]); // useEffect will run whenever xaxis, yaxis, or p changes
+    
+    
     useEffect(()=>{
-        fetchHanlder(1);
+        fetchHandler(1);
         let cnt=(graphPoints.length+9)/10;
         setCount(cnt)
     },[])
@@ -109,7 +125,7 @@ const ReportsPage = () => {
     },[])
     const handlePageChange = async(event, page) => {
         const cnt=await page
-        fetchHanlder(cnt);
+        fetchHandler(cnt);
         setP(cnt);
     };
     const option = {
@@ -362,7 +378,7 @@ const ReportsPage = () => {
                                 {
                                     graphData.map((data)=>(
                                         <>
-                                        <div className={`${data.select && 'selected'} indi-report-name d-flex mb-2`} key={data.name} onClick={()=>{
+                                        <div className={`${data.select && 'selected'} ${mode && 'selected-dark'} indi-report-name d-flex mb-2`} key={data.name} onClick={()=>{
                                             addData(data,data.index)
                                         }}>
                                             <span className={`${data.select && 'selected-option'} w-100`}>{data.name}</span>
