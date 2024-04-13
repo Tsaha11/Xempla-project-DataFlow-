@@ -34,3 +34,13 @@
     background-color: black;
 }
 
+
+@media  screen and (max-width: 1000px) {
+    .report-page-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.container-opts{
+    margin-bottom: 2em;
+}

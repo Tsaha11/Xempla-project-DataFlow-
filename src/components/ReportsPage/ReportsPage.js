@@ -345,7 +345,7 @@ const ReportsPage = () => {
                 <div className='page-title'>
                     <h1>Asset Performance Report</h1>
                 </div>
-                <div className='report-page-wrapper d-flex flex-row mt-4'>
+                <div className='report-page-wrapper d-flex flex-col flex-wrap mt-4'>
                     <div className='col-lg-5 col-xl-4 col-xxl-4 container-opts'>
                         <div className='wrapper-in-con-opts p-4'>
                             <div className='input-search-wrapper position-relative'>
