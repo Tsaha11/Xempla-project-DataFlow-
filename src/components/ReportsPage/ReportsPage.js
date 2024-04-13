@@ -94,11 +94,32 @@ const ReportsPage = () => {
                 setAvg(updatedAvg);
                 setNamesAbbr(updatedNamesAbbr);
                 setIdx(updatedIdx);
+            } else {
+                const x = [];
+                const y = [];
+                const names = [];
+                const avgdata = [];
+                const newIdx = [];
+                for (let i = 0; i < xaxis.length; i++) {
+                    if (!(xaxis[i] === data.val1 && yaxis[i] === data.val2 && avg[i] === (data.val1 + data.val2) / 2 && namesAbbr[i] === findAbbr(data.name))) {
+                        x.push(xaxis[i]);
+                        y.push(yaxis[i]);
+                        avgdata.push(avg[i]);
+                        names.push(namesAbbr[i]);
+                        newIdx.push(idx[i]);
+                    }
+                }
+                setXaxis(x);
+                setYaxis(y);
+                setAvg(avgdata);
+                setIdx(newIdx);
+                setNamesAbbr(names);
             }
         } catch (error) {
             console.error("Error adding data:", error);
         }
     };
+    
     
     useEffect(() => {
         const fetchData = async () => {
